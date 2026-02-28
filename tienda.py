@@ -17,14 +17,21 @@ while True:
     except ValueError:
         print("Please insert a valid quantity")        
 
+#Subtotal calculation
 subtotal = price * quantity
-total = 0
+totalgross = 0
 discount = 0
+
+#Discount calculation
 if subtotal>= 50000:
     discount = subtotal*0.05
-    total = subtotal - discount
+    totalgross = subtotal - discount
 else:
-    total = subtotal
+    totalgross = subtotal
+
+#Taxes calculation    
+iva = totalgross*0.19
+totalnet = totalgross + iva
 
 os.system("clear")
 print(f"The name of the client is: {name}")
@@ -35,4 +42,8 @@ print(f"The subtotal is: {subtotal}")
 print("==========")
 print(f"The discount is: {discount}")
 print("==========")
-print(f"The total is: {total}")
+print(f"The total gross is: {totalgross}")
+print("==========")
+print(f"The IVA is: {iva}")
+print("==========")
+print(f"The total net is: {totalnet}")
