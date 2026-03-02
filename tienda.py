@@ -17,7 +17,7 @@ while True:
     
         print("Insert a number between 0 and 2")
 
-while True:        
+while True:
     name = str(input("Please insert the name of the client: "))
     if name == None:
         print("Name is required")
@@ -85,14 +85,7 @@ totalgross -= clientDiscount
 iva = totalgross*0.19
 totalnet = totalgross + iva
 
-# Type of purchase
-typeOfPurchase = None
-if totalnet < 50000:
-    typeOfPurchase = "Small"
-elif 50000<=totalnet<=150000:
-    typeOfPurchase = "Medium"
-else:
-    typeOfPurchase = "Big"
+
 
 
 os.system("clear")
@@ -109,9 +102,3 @@ print("==========")
 print(f"The IVA is: {iva}")
 print("==========")
 print(f"The total net is: {totalnet}")
-print("==========")
-print(f"Thanks for your purchase {name}")
-print("==========")
-print(f"You are a {nameClientType} client")
-print("==========")
-print(f"Your purchase was {typeOfPurchase}")
